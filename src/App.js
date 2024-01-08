@@ -17,7 +17,7 @@ function App() {
       return;
     }
 
-    const apiUrl = `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=at_9wfARMW9cg5AMvW6tYr7A1i3RLxsQ&domainName=${domainName}&credits=DA`;
+    const apiUrl = `${process.env.REACT_APP_API_URL}?apiKey=${process.env.REACT_APP_API_KEY}&domainName=${domainName}&credits=DA`;
 
     // Display loader
     setLoading(true);
